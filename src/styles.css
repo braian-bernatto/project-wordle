@@ -124,17 +124,20 @@ h1 {
   --radius: 0px 0px 0px 4px;
 }
 
-.cell.correct {
+.cell.correct,
+.keyboard-key.correct {
   background: var(--color-success);
   border-color: var(--color-success);
   color: white;
 }
-.cell.incorrect {
+.cell.incorrect,
+.keyboard-key.incorrect {
   background: var(--color-gray-300);
   border-color: var(--color-gray-300);
   color: white;
 }
-.cell.misplaced {
+.cell.misplaced,
+.keyboard-key.misplaced {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
@@ -239,4 +242,29 @@ h1 {
   padding: 2px 4px;
   border-radius: 4px;
   border: 2px solid white;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  background-color: #e6e6e6;
 }

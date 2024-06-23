@@ -7,6 +7,7 @@ import GuessList from '../GuessList'
 import Banner from '../Banner/Banner'
 import {checkGuess} from '../../game-helpers'
 import {NUM_OF_GUESSES_ALLOWED} from '../../constants'
+import Keyboard from '../Keyboard'
 
 function Game() {
   const [answer, setAnswer] = React.useState(() => sample(WORDS))
@@ -66,6 +67,7 @@ function Game() {
           restartGame={restartGame}
         />
       )}
+      <Keyboard guessList={guessList} answer={answer} />
     </>
   )
 }
